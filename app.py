@@ -9,7 +9,7 @@ import pandas as pd
 # -------------------------------
 
 class Block:
-    def _init_(self, index, timestamp, data, previous_hash):
+    def __init__(self, index, timestamp, data, previous_hash):
         self.index = index
         self.timestamp = timestamp
         self.data = data  # ticket info
@@ -22,7 +22,7 @@ class Block:
 
 
 class Blockchain:
-    def _init_(self):
+    def __init__(self):
         self.chain = [self.create_genesis_block()]
 
     def create_genesis_block(self):
